@@ -60,7 +60,7 @@ nav {
           font-size: 2rem;
         }
         @media @Lmobile {
-          font-size: 2.2rem;
+          font-size: 2.4rem;
         }
         @media @tablet {
           font-size: 2.6rem;
@@ -122,7 +122,6 @@ header {
       p {
         text-align: center;
         font-size: 1.6rem;
-        
       }
     }
   }
@@ -130,6 +129,17 @@ header {
 
 body {
   main {
+    //welcome
+    .welcome-header {
+      @media @Ttablet {
+        display: none;
+      }
+      @media @tablet {
+        font-size: 2rem;
+        .flex-centered;
+      }
+    }
+
     // three titles
     .unique {
       @media @Mmobile {
@@ -151,7 +161,8 @@ body {
     }
     @media @tablet {
       .video {
-        display: none;
+        display: block;
+        .flex-evenly;
       }
     }
 
@@ -162,11 +173,13 @@ body {
       }
     }
     .horizontal-scroll {
-      @media @tablet {
-        display: block;
+      .top-row {
+        @media @tablet {
+          display: block;
 
-        img {
-          width: 12rem;
+          img {
+            width: 12rem;
+          }
         }
       }
 
@@ -194,35 +207,58 @@ body {
         }
       }
     }
+
+    //project columns for mobile Projects Page
+    .vertical-scroll {
+      @media @tablet {
+        display: unset;
+        .top-row,
+        .bottom-row {
+          .flex-row;
+        }
+      }
+
+      img {
+        @media @tablet {
+          display: block;
+          width: 12rem;
+        }
+
+        @media @desktop {
+          width: 15rem;
+        }
+
+        @media @Ldesktop {
+          width: 28rem;
+        }
+
+        @media @4k {
+          width: 50rem;
+        }
+      }
+    }
   }
 
-  //project columns for mobile Projects Page
-  .vertical-scroll {
-    @media @tablet {
-      display: unset;
-      .top-row,
-      .bottom-row {
-        .flex-row;
+  // About us Page
+  @media @tablet {
+    .horizontal-team-header {
+      display: block;
+    }
+    .about-container {
+      .lead-profile {
+        display: block;
+      }
+    }
+  }
+  @media @desktop {
+    main {
+      h2 {
+        font-size: 1.8rem;
       }
     }
 
-    img {
-      @media @tablet {
-        display: block;
-        width: 12rem;
-      }
-
-      @media @desktop {
-        width: 15rem;
-      }
-
-      @media @Ldesktop {
-        width: 28rem;
-      }
-
-      @media @4k {
-        width: 50rem;
-      }
+    .main-content {
+      .flex-evenly;
     }
   }
 }

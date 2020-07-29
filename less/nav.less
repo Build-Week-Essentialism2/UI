@@ -1,11 +1,11 @@
 nav {
+  width: 100%;
   // Navigation menu
   h1 {
     font-size: 1.2rem;
   }
   .top-nav {
-    background-color: @web-color;
-    width: auto;
+    background-color: @pot3;
     .flex-row;
   }
 
@@ -26,42 +26,42 @@ nav {
       right: 0;
       top: 0;
       font-size: 2rem;
-      background: linear-gradient(to top, skyblue 55%, pink 75%);
+      background-color: @a-link;
     }
 
     a {
-      color: @a-text-color;
+      color: @img-box;
       padding: 1rem 1rem;
       text-decoration: none;
       font-size: 1.2rem;
       margin: 0 auto;
-      background-color: @backdrop-color;
+      background-color: @a-link;
       height: auto;
-      border-radius: 2rem;
+      border-radius: 1rem;
       :hover {
         // background-color: grey;
-        color: @menu-button;
+        color: @img-box;
       }
     }
   }
 
   // bottom navigation
-  .bottom-nav {
-    background-color: @web-color;
-    width: auto;
-    height: 200px;
-    .flex-column;
+  
+    .bottom-nav {
+      background-color: @pot4;
+      height: 200px;
+      .flex-column;
 
-    a {
-      display: inline-block;
-    }
+      a {
+        display: inline-block;
+      }
 
-    .fa-do {
-      font-size: 4rem;
-      // .flex-row;
-      width: 80%;
-      padding: 2rem;
-      .flex-evenly;
+      .fa-do {
+        font-size: 4rem;
+        // .flex-row;
+        width: 80%;
+        padding: 2rem;
+        .flex-evenly;
+      }
     }
   }
-}
