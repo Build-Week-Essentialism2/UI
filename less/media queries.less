@@ -63,13 +63,13 @@ nav {
           font-size: 2.4rem;
         }
         @media @tablet {
-          font-size: 2.6rem;
+          font-size: 2.5rem;
         }
         @media @Ldesktop {
-          font-size: 2.8rem;
+          font-size: 2.6rem;
         }
         @media @4k {
-          font-size: 3.5rem;
+          font-size: 3.2rem;
         }
       }
     }
@@ -136,7 +136,7 @@ body {
       }
       @media @tablet {
         font-size: 2rem;
-        .flex-centered;
+        .flex-center-stretch;
       }
     }
 
@@ -169,12 +169,23 @@ body {
     // 'Essential ideas' rows for tablet and desktop
     .container {
       @media @tablet {
-        display: block;
+        .mobile-h3 {
+          display: none;
+        }
+        .tablet-h3 {
+          display: block;
+        }
       }
     }
     .horizontal-scroll {
       @media @tablet {
+        margin: 0 auto;
         display: block;
+        width: 100%;
+        img {
+          width: 10rem;
+          height: auto;
+        }
       }
     }
 
@@ -184,6 +195,15 @@ body {
 
         img {
           width: 22rem;
+        }
+        .top-row, .bottom-row{
+          .flex-evenly;
+        }
+
+        .profiles{
+          text-align: center;
+          width:30rem;
+          margin:5rem;
         }
       }
 
@@ -291,13 +311,12 @@ body {
     }
   }
 
-@media @desktop {
-  main {
-    h2 {
-      font-size: 1.8rem;
+  @media @desktop {
+    main {
+      h2 {
+        font-size: 1.8rem;
+      }
     }
-  }
-
 
     .main-content {
       .flex-evenly;

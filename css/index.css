@@ -150,7 +150,7 @@ table {
   justify-content: space-evenly;
   align-items: center;
 }
-.flex-centered {
+.flex-center-stretch {
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -175,63 +175,119 @@ table {
   justify-content: center;
   align-items: center;
 }
-html body {
+.top-nav {
+  background-color: #60afdd;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.menu-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.menu-button #myLinks {
+  display: none;
+}
+.menu-button .icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 2rem;
+  background-color: #60afdd;
+}
+.menu-button a {
+  color: #d6d8d3;
+  padding: 1rem 1rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  background-color: #60afdd;
+  height: auto;
+  border-radius: 1rem;
+}
+.menu-button a :hover {
+  color: #d6d8d3;
+}
+.bottom-nav {
+  background-color: #14213d;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bottom-nav a {
+  display: inline-block;
+}
+.bottom-nav .fa-do {
+  font-size: 4rem;
+  width: 80%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body {
   margin: 0;
+}
+body main .container .tablet-h3 {
+  display: none;
+}
+body main .horizontal-scroll {
   align-items: stretch;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-html body {
-  margin: 0;
-}
-html body main .horizontal-scroll {
   display: none;
 }
-html body main p {
+body main p {
   margin: 0 auto;
 }
-html body main h2 {
+body main h2 {
   font-weight: bold;
 }
-html body .welcome-header {
+body .welcome-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-html body canvas {
+body canvas {
   width: 100%;
   height: 100%;
 }
-html body .top-row,
-html body .bottom-row {
+body .top-row,
+body .bottom-row {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-html body .top-row ul,
-html body .bottom-row ul {
+body .top-row ul,
+body .bottom-row ul {
   padding: 4rem;
   box-sizing: border-box;
 }
-html body .container {
-  margin: 0 auto;
-}
-html body .container h3 {
-  font-size: 2rem;
-}
-html body .container .tablet-h3 {
-  display: none;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
 }
 .carousel-inner img {
   margin: 0 auto;
 }
-.horizontal-team-header {
+.about-container {
   display: none;
 }
 main .dark-mode {
@@ -312,90 +368,32 @@ body main #myCarousel1 .carousel img {
   margin: 0 auto;
   width: 30rem;
 }
-
 body main .horizontal-row {
   display: none;
 }
 body main .about-container {
   display: none;
 }
-nav {
-  width: 100%;
+.about-header,
+.about-container {
+  text-align: center;
 }
-nav h1 {
-  font-size: 1.2rem;
+.about-header p,
+.about-container p {
+  margin-bottom: 6rem;
 }
-nav .top-nav {
-  background-color: #60afdd;
-  width: auto;
-  height: 200px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+#myCarousel1 {
+  text-align: center;
+  padding-bottom: 4rem;
 }
-nav .menu-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-nav .menu-button #myLinks {
-  display: none;
-}
-nav .menu-button .icon {
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 2rem;
-  background-color: #60afdd;
-}
-nav .menu-button a {
-  color: #d6d8d3;
-  padding: 1rem 1rem;
-  text-decoration: none;
-  font-size: 1.2rem;
+.carousel-inner {
   margin: 0 auto;
-  background-color: #60afdd;
-  height: auto;
-  border-radius: 1rem;
 }
-nav .menu-button a :hover {
-  color: #d6d8d3;
+.carousel-inner img {
+  width: 12rem;
 }
-nav .bottom-nav {
-  background-color: #14213d;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-nav .bottom-nav a {
-  display: inline-block;
-}
-nav .bottom-nav .fa-do {
-  font-size: 4rem;
-  width: 80%;
-  padding: 2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.vertical-scroll {
-  display: none;
-}
-.vertical-scroll .top-row,
-.vertical-scroll .bottom-row {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.vertical-scroll ul img {
-  width: 24rem;
+.about-container .headers {
+  text-align: center;
 }
 * {
   font-family: "Raleway", sans-serif;
@@ -422,19 +420,23 @@ nav img:hover {
 header {
   margin: 0 auto;
 }
-header #myCarousel {
+header #myCarousel1 #myCarousel {
   display: flex;
   justify-content: center;
   align-items: stretch;
   align-items: center;
   text-align: center;
 }
-header #myCarousel .carousel {
+header #myCarousel1 #myCarousel .carousel {
   width: fit-content;
 }
-header #myCarousel .carousel img {
+header #myCarousel1 #myCarousel .carousel img {
   margin: 0 auto;
   width: 30rem;
+}
+header #myCarousel1 #myCarousel h2,
+header #myCarousel1 #myCarousel p {
+  text-align: center;
 }
 body main {
   height: auto;
@@ -724,17 +726,17 @@ body main .horizontal-scroll img:hover {
 }
 @media (min-width: 768px) {
   nav .menu-button #myLinks a {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
   }
 }
 @media (min-width: 1440px) {
   nav .menu-button #myLinks a {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
   }
 }
 @media (min-width: 2560px) {
   nav .menu-button #myLinks a {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
   }
 }
 @media (min-width: 375px) {
@@ -833,13 +835,22 @@ body main .horizontal-scroll img:hover {
   }
 }
 @media (min-width: 768px) {
-  body main .container {
+  body main .container .mobile-h3 {
+    display: none;
+  }
+  body main .container .tablet-h3 {
     display: block;
   }
 }
 @media (min-width: 768px) {
-  body main .horizontal-scroll .top-row {
+  body main .horizontal-scroll {
+    margin: 0 auto;
     display: block;
+    width: 100%;
+  }
+  body main .horizontal-scroll img {
+    width: 10rem;
+    height: auto;
   }
 }
 @media (min-width: 768px) {
@@ -848,6 +859,18 @@ body main .horizontal-scroll img:hover {
   }
   body main .about-container img {
     width: 22rem;
+  }
+  body main .about-container .top-row,
+  body main .about-container .bottom-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  body main .about-container .profiles {
+    text-align: center;
+    width: 30rem;
+    margin: 5rem;
   }
 }
 @media (min-width: 1024px) {
